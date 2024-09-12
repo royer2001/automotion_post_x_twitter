@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask env
+instance/
+.env
+venv/
+.venv/
+
+# Flask logs
+*.log
+
+# Pytest cache
+.pytest_cache/
+
+# Virtual Environment
+.env/
+*.env
+venv/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Cache files
+*.cache
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Pyenv
+.python-version
+
+# Pipenv
+Pipfile.lock
+pip-log.txt
+
+# Docker files
+*.pid
+
+# virtual-env >>> python -m venv x-env
+x-env
