@@ -1,11 +1,19 @@
 from flask import Flask
-from flask_restful import Api
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from config import Config
+
+db = SQLAlchemy()
+migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
-    api = Api(app)
+    app.config.from_object(Config)
 
-    from .routes import initialize_routes
-    initialize_routes(api)
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+    from app.routes import init_app as routes_init
+    routes_init(app)
 
     return app

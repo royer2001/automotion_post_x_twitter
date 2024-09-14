@@ -61,4 +61,5 @@ pip-log.txt
 *.pid
 
 # virtual-env >>> python -m venv x-env
-x-env
+x-env/
+migrations/
