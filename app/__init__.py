@@ -21,6 +21,9 @@ def create_app():
     jwt.init_app(app)
     migrate.init_app(app, db)
 
+    from app.utils.jwt_config import  configure_jwt
+    configure_jwt(app)
+
     from app.routes import init_app as routes_init
     routes_init(app)
 
